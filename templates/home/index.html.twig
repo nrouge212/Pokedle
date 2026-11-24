@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pokedle - Accueil{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<div class="home-container">
+
+    <!-- Compteur de pièces -->
+    <div class="coin-counter">
+        <span>0</span>
+        <img src="{{ asset('images/coin.png') }}" alt="Pièce">
+    </div>
+
+    <!-- Pokémon décoratifs -->
+    <img class="pokemon pokemon-left"
+         src="{{ asset('images/zekrom.png') }}"
+         alt="Zekrom">
+
+    <img class="pokemon pokemon-right"
+         src="{{ asset('images/reshiram.png') }}"
+         alt="Reshiram">
+
+    <img class="pokemon pokemon-top"
+         src="{{ asset('images/victini.png') }}"
+         alt="Victini">
+
+    <!-- Menu principal -->
+    <main class="main-menu">
+
+        <img class="logo"
+             src="{{ asset('images/logo-pokedle.png') }}"
+             alt="Pokedle">
+
+        <div class="menu-buttons">
+
+            <a href="#" class="menu-button play-button">
+                Jouer
+                <span class="button-icon">🎮</span>
+            </a>
+
+            <div class="training-title">
+                Entrainement
+            </div>
+
+            <a href="#" class="menu-button">
+                Wordle
+                <span class="button-icon">🔎</span>
+            </a>
+
+            <a href="#" class="menu-button">
+                Carte
+                <span class="button-icon">🃏</span>
+            </a>
+
+            <a href="#" class="menu-button">
+                Silhouette
+                <span class="button-icon">🌑</span>
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- Boutons secondaires -->
+    <div class="secondary-buttons">
+        <a href="#" class="secondary-button">Classement 🏆</a>
+        <a href="#" class="secondary-button">Se connecter</a>
+    </div>
+
+</div>
+
+{% endblock %}
